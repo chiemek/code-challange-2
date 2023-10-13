@@ -1,0 +1,290 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* typography */
+@import url("https://fonts.googleapis.com/css?family=Epilogue:700|Poppins:400");
+
+html {
+  font-size: 100%;
+} /*16px*/
+
+body {
+  background: white;
+  font-family: "Epilogue", sans-serif;
+  font-weight: 700;
+  line-height: 1.75;
+  color: #000000;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 3rem 0 1.38rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+small,
+.text_small {
+  font-size: 0.8rem;
+}
+
+/* styling */
+
+/* heading */
+header {
+  display: flex;
+  padding-inline: 3rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  color: rgb(117, 112, 112);
+}
+
+.logo-container .logo {
+  font-weight: 700;
+  color: #000000;
+  font-size: 1.5rem;
+}
+
+.logo-container ul {
+  padding-left: 7.5rem;
+}
+
+nav ul {
+  color: rgb(117, 112, 112);
+  align-items: center;
+}
+
+.icons {
+  display: flex;
+
+  /* align-items: center; */
+  justify-content: center;
+}
+
+#close,
+.fa-bars {
+  display: none;
+}
+
+nav ul,
+section,
+.logo-container ul {
+  list-style: none;
+  display: flex;
+  gap: 5rem;
+  justify-content: space-between;
+}
+
+nav .register {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding-inline: 5px;
+  margin-top: 13px;
+  margin-bottom: 15px;
+}
+
+/* body */
+
+section {
+  padding-top: 5rem;
+  /* padding-inline: 7rem; */
+  padding-inline: 0;
+}
+
+section .container {
+  margin-top: 10rem;
+  width: min(90%, 600px);
+  margin-inline: auto;
+}
+
+.container h1 {
+  font-weight: 700;
+  line-height: 3rem;
+  display: inline-block;
+  transform: scale(1.5);
+  margin-left: 4.5rem;
+  margin-bottom: 5rem;
+}
+
+.container p {
+  font-weight: 400;
+  display: inline-block;
+  color: rgb(117, 112, 112);
+  font-size: bold;
+  margin-bottom: 5rem;
+  margin-left: 2.5rem;
+  transform: scale(1.2);
+  width: 400px;
+}
+
+section img {
+  margin-top: 0;
+}
+
+.container button {
+  display: block;
+  background-color: black;
+  color: white;
+  height: 3rem;
+  width: 8rem;
+  margin-bottom: 10rem;
+  border-radius: 10px;
+}
+
+section ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  list-style: none;
+  padding-inline: 0;
+}
+
+/* media query */
+@media (max-width: 780px) {
+  .logo-container ul,
+  nav ul {
+    display: none;
+  }
+
+  header {
+    padding-inline: 2rem;
+  }
+  .fa-bars {
+    display: block;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+}
