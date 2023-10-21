@@ -59,22 +59,16 @@
           </ul>
         </div>
         <picture>
+          <source width: 500px; media="(min-width: 700px)"
+          srcset="images/image-hero-desktop.png" />
           <source
-            media="(min-width: 700px)"
-            srcset="images/image-hero-desktop.png"
-          />
-          <source
+            class="mobile"
+            style="width: 5rem"
             media="(max-width: 700px)"
-            srcset="image/image-hero-mobile.png"
+            srcset="images/image-hero-mobile.png"
           />
 
-          <img
-            style="margin-right: 10rem"
-            src="images/image-hero-desktop.png"
-            width="700px"
-            height="800px"
-            alt=""
-          />
+          <img src="images/image-hero-desktop.png" alt="" />
         </picture>
       </section>
     </div>

@@ -192,7 +192,7 @@ section,
 .logo-container ul {
   list-style: none;
   display: flex;
-  gap: 5rem;
+  gap: 4rem;
   justify-content: space-between;
 }
 
@@ -207,9 +207,11 @@ nav .register {
 /* body */
 
 section {
-  padding-top: 5rem;
+  padding-top: 1rem;
   /* padding-inline: 7rem; */
   padding-inline: 0;
+  border: 1px solid black;
+  padding-bottom: 5rem;
 }
 
 section .container {
@@ -262,6 +264,15 @@ section ul {
 
 /* media query */
 @media (max-width: 780px) {
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  body {
+    width: 100vw;
+  }
+
   .logo-container ul,
   nav ul {
     display: none;
@@ -269,6 +280,7 @@ section ul {
 
   header {
     padding-inline: 2rem;
+    margin-bottom: 0;
   }
   .fa-bars {
     display: block;
@@ -277,6 +289,8 @@ section ul {
   section {
     display: flex;
     flex-direction: column-reverse;
+    width: 100vw;
+    border: 1px solid black;
   }
 
   section .container {
@@ -287,4 +301,20 @@ section ul {
     padding: 0;
     margin: 0;
   }
+
+  picture img {
+    width: 100vw;
+    height: 200px;
+    margin-right: 10rem;
+  }
+}
+
+picture img {
+  width: 550px;
+  height: 700px;
+  margin-right: 10rem;
+}
+
+source {
+  display: inline-block;
 }
