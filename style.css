@@ -145,6 +145,7 @@ small,
 }
 
 /* styling for mobile view */
+
 /* header */
 header {
   display: flex;
@@ -156,6 +157,7 @@ header {
 
 header h1 {
   font-weight: 700;
+  width: 100%;
 }
 
 .fa-bars {
@@ -203,12 +205,27 @@ section h1 {
 
 .container ul {
   display: flex;
+  justify-content: space-between;
   list-style: none;
   gap: 2rem;
+  padding-left: 0;
 }
 
+/* image for mobile */
+@media (max-width: 1000px) {
+  .image {
+    content: url(./images/image-hero-mobile.png);
+    height: 40%;
+    /* object-fit: cover; */
+  }
+}
+
+/* .container .mobile {
+  height: 10rem;
+} */
+
 /* media query, desktop view */
-@media (min-width: 700px) {
+@media (min-width: 1000px) {
   header h1 {
     margin: 0;
   }
